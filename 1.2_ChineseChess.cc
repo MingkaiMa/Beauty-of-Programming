@@ -13,7 +13,7 @@
 
 int main()
 {
-    unsigned int b = 0;
+    unsigned char b = '\0';
     for(LSET(b, 1); LGET(b) <= GRIDW * GRIDW; LSET(b, (LGET(b) + 1)))
         for(RSET(b, 1); RGET(b) <= GRIDW * GRIDW; RSET(b, (RGET(b) + 1)))
             if(LGET(b) % GRIDW != RGET(b) % GRIDW)
@@ -21,3 +21,4 @@ int main()
 
     return 0;
 }
+
