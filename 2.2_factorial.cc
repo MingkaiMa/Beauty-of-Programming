@@ -32,11 +32,22 @@ int trailZeroSolu2(int n)
     return ret;
 }
 
+int lowestOne(int n)
+{
+    int ret = 0;
+    while(n)
+    {
+        n >>= 1;
+        ret += n;
+    }
+    return ret;
+}
 
 
 int main()
 {
     std::cout << trailZeroSolu1(20) << "\n";
     std::cout << trailZeroSolu2(20) << "\n";
+    std::cout << lowestOne(20) << "\n";
 }
 
