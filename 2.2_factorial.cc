@@ -4,7 +4,7 @@
 
 //Solution 1
 
-int trailZero(int n)
+int trailZeroSolu1(int n)
 {
     int ret = 0;
     for(int i = 1; i <= n; i++)
@@ -19,7 +19,24 @@ int trailZero(int n)
     return ret;
 }
 
+
+int trailZeroSolu2(int n)
+{
+    int ret = 0;
+    while(n)
+    {
+        ret += n / 5;
+        n /= 5;
+    }
+
+    return ret;
+}
+
+
+
 int main()
 {
-    std::cout << trailZero(20) << "\n";
+    std::cout << trailZeroSolu1(20) << "\n";
+    std::cout << trailZeroSolu2(20) << "\n";
 }
+
