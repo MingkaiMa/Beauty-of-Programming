@@ -41,7 +41,6 @@ void MaxSum3(int* A, int n)
     {
         if(sum + A[i] < A[i])
         {
-            cout << "iii: " << i << endl;
             sum = A[i];
             startIndex = i;
         }
